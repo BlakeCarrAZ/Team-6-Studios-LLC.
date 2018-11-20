@@ -19,11 +19,9 @@ import java.time.format.DateTimeFormatter;
 import javax.swing.*;
 
 class Activity implements Comparable<Activity> {
-	
 	String activityName;
 	int duration;
 	ArrayList<String> dependencies;
-
 	public Activity(String activityName, int duration, ArrayList<String> dependencies) {
 		this.activityName = activityName;
 		this.duration = duration;
@@ -50,7 +48,6 @@ class Activity implements Comparable<Activity> {
 
 	@Override
 	public int compareTo(Activity other) {
-
 		return activityName.compareTo(other.activityName);
 	}
 }
@@ -108,14 +105,12 @@ public class GUI {
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.getContentPane().setLayout(null);
 		
-		
 		// Application title of main application window:
 		JLabel labelTitle = new JLabel("Network Diagram Analyzer");
 		labelTitle.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
 		labelTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		labelTitle.setBounds(149, 26, 200, 15);
 		mainFrame.getContentPane().add(labelTitle);
-		
 		
 		// Quit button:
 		JButton quitButton = new JButton("Quit");
@@ -353,7 +348,6 @@ public class GUI {
 				}
 			});
 		
-		
 		// Process button:
 		JButton buttonProcess = new JButton("Process");
 		buttonProcess.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
@@ -385,7 +379,6 @@ public class GUI {
 					}
 				}
 			});
-		
 			
 		// Reset button:
 		JButton buttonReset = new JButton("Reset");
@@ -514,7 +507,6 @@ public class GUI {
 			activityList.add(current);
 		}
 	}
-
 	
 	protected int addActivityListToPath()
 	{
@@ -826,4 +818,3 @@ class SortHelper {
 		this.duration = duration;
 	}
 }
-   
